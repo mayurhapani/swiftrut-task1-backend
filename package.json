@@ -5,14 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "npm install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "nodemon": "^3.1.4",
+    "nodemon": "^3.1.5",
     "prettier": "^3.3.3"
   },
   "dependencies": {
@@ -23,9 +24,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.1",
-    "mongoose-aggregate-paginate-v2": "^1.1.2"
-  },
-  "engines": {
-    "node": ">=14.x"
+    "mongoose-aggregate-paginate-v2": "^1.1.2",
+    "nodemon": "^3.1.5"
   }
 }
