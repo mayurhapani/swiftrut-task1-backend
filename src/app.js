@@ -20,6 +20,9 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 //user routers
+app.get("/", (req, res) => {
+  res.send("welcome!");
+});
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/tasks", taskRouter);
 
