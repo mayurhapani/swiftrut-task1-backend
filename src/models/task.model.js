@@ -20,6 +20,10 @@ const taskSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
+    assignTo: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
     isCompleted: {
       type: Boolean,
       default: false,

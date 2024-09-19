@@ -89,7 +89,10 @@ const getTasks = asyncHandler(async (req, res) => {
   let tasks;
 
   if (user.role == "admin") {
-    tasks = await taskModel.find({}).populate("createdBy", "name");
+    tasks = await taskModel
+      .find({})
+      .populate("createdBy", "name")
+      .populate("assignTo", "name");
   } else {
     tasks = await taskModel
       .find({ createdBy: req.user._id })
